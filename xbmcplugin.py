@@ -15,6 +15,8 @@ from xbmcgui import ListItem
 
 __kodistubs__ = True
 
+VirtualView = []
+
 str_type = Union[str, unicode]
 
 SORT_METHOD_ALBUM = 14
@@ -62,6 +64,14 @@ SORT_METHOD_VIDEO_USER_RATING = 20
 SORT_METHOD_VIDEO_YEAR = 18
 
 
+def returnDirectory():
+    return VirtualView
+
+
+def clearDirectory():
+    del VirtualView[:]
+
+
 def addDirectoryItem(handle, url, listitem, isFolder=False, totalItems=0):
     # type: (int, str_type, ListItem, bool, int) -> bool
     """
@@ -84,6 +94,7 @@ def addDirectoryItem(handle, url, listitem, isFolder=False, totalItems=0):
 
         if not xbmcplugin.addDirectoryItem(int(sys.argv[1]), 'F:\\Trailers\\300.mov', listitem, totalItems=50): break
     """
+    VirtualView.append(url)
     return True
 
 

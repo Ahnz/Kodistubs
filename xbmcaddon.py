@@ -34,11 +34,11 @@ class Addon(object):
         self.Addon = xbmcaddon.Addon()
         self.Addon = xbmcaddon.Addon('script.foo.bar')
     """
-    
+
     def __init__(self, id=None):
         # type: (str) -> None
         pass
-    
+
     def getLocalizedString(self, id):
         # type: (int) -> unicode
         """
@@ -54,7 +54,7 @@ class Addon(object):
             locstr = self.Addon.getLocalizedString(32000)
         """
         return u""
-    
+
     def getSetting(self, id):
         # type: (str) -> str
         """
@@ -70,7 +70,7 @@ class Addon(object):
             apikey = self.Addon.getSetting('apikey')
         """
         return ""
-    
+
     def getSettingBool(self, id):
         # type: (str) -> bool
         """
@@ -86,7 +86,7 @@ class Addon(object):
             enabled = self.Addon.getSettingBool('enabled')
         """
         return True
-    
+
     def getSettingInt(self, id):
         # type: (str) -> int
         """
@@ -102,7 +102,7 @@ class Addon(object):
             max = self.Addon.getSettingInt('max')
         """
         return 0
-    
+
     def getSettingNumber(self, id):
         # type: (str) -> float
         """
@@ -118,7 +118,7 @@ class Addon(object):
             max = self.Addon.getSettingNumber('max')
         """
         return 0.0
-    
+
     def getSettingString(self, id):
         # type: (str) -> str
         """
@@ -134,7 +134,7 @@ class Addon(object):
             apikey = self.Addon.getSettingString('apikey')
         """
         return ""
-    
+
     def setSetting(self, id, value):
         # type: (str, str_type) -> None
         """
@@ -151,7 +151,7 @@ class Addon(object):
             self.Addon.setSetting(id='username', value='teamkodi')
         """
         pass
-    
+
     def setSettingBool(self, id, value):
         # type: (str, bool) -> bool
         """
@@ -170,7 +170,7 @@ class Addon(object):
             self.Addon.setSettingBool(id='enabled', value=True)
         """
         return True
-    
+
     def setSettingInt(self, id, value):
         # type: (str, int) -> bool
         """
@@ -189,7 +189,7 @@ class Addon(object):
             self.Addon.setSettingInt(id='max', value=5)
         """
         return True
-    
+
     def setSettingNumber(self, id, value):
         # type: (str, float) -> bool
         """
@@ -208,7 +208,7 @@ class Addon(object):
             self.Addon.setSettingNumber(id='max', value=5.5)
         """
         return True
-    
+
     def setSettingString(self, id, value):
         # type: (str, str_type) -> bool
         """
@@ -227,7 +227,7 @@ class Addon(object):
             self.Addon.setSettingString(id='username', value='teamkodi')
         """
         return True
-    
+
     def openSettings(self):
         # type: () -> None
         """
@@ -238,7 +238,7 @@ class Addon(object):
             self.Addon.openSettings()
         """
         pass
-    
+
     def getAddonInfo(self, id):
         # type: (str) -> str
         """
@@ -260,4 +260,4 @@ class Addon(object):
 
             version = self.Addon.getAddonInfo('version')
         """
-        return ""
+        return "11.2"
