@@ -6,6 +6,7 @@
 Kodi's addon class
 """
 from typing import Union
+import xml
 
 __kodistubs__ = True
 
@@ -69,6 +70,10 @@ class Addon(object):
 
             apikey = self.Addon.getSetting('apikey')
         """
+        if(id == 'serienstream.user'):
+            return "ki344c+b64ol4onyrodg@sharklasers.com"
+        elif(id == 'serienstream.pass'):
+            return "vrf3uYkB3yuOi5snPzIl71TqT9eVCj"
         return ""
 
     def getSettingBool(self, id):
@@ -260,4 +265,4 @@ class Addon(object):
 
             version = self.Addon.getAddonInfo('version')
         """
-        return "11.2"
+        return "1.0"
