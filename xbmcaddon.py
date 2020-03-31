@@ -265,4 +265,6 @@ class Addon(object):
 
             version = self.Addon.getAddonInfo('version')
         """
+        if id == 'path' or id == 'profile':
+            return "/var/www/nwb/Webserver/"
         return "1.0"
