@@ -2236,7 +2236,7 @@ def translatePath(path):
 
         fpath = xbmc.translatePath('special://masterprofile/script_data')
     """
-    return ""
+    return path
 
 
 def getCleanMovieTitle(path, usefoldername=False):
