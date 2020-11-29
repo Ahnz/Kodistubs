@@ -7,6 +7,7 @@ Kodi's addon class
 """
 from typing import Union
 import xml
+import os
 
 __kodistubs__ = True
 
@@ -266,5 +267,5 @@ class Addon(object):
             version = self.Addon.getAddonInfo('version')
         """
         if id == 'path' or id == 'profile':
-            return "/var/www/nwb/Webserver/"
+            return os.getcwd()
         return "1.0"
